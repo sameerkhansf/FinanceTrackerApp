@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Transactions</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Welcome to Expense Tracker</h1>
+
+    <p>Please add your recent expense.</p>
+    
+    <!-- Expense Form -->
+    <form id="expenseForm">
+        <input type="date" id="date" required>
+        <input type="number" min="0" step ="0.01" id="amount" class="no-spinners" placeholder="Amount" style="appearance: textfield;"  required>
+        <select id="category">
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+            <option value="utilities">Utilities</option>
+            <option value="entertainment">Entertainment</option>
+            <!-- Add more categories as needed -->
+        </select>
+        <button type="submit">Add</button>
+    </form>
+
+    <!-- Expense Sorting Options -->
+    <div id="sortingOptions">
+        <button id="addexpensesByMonth"> Total Expenses by Month</button>
+        <button id="addexpensesByCategory">Total Expenses by Category</button>
+    </div>
+    
+    <h2>Recent Expenses:</h2>
+    <div id="expensesList" >
+        <!-- Expenses will be listed here -->
+    </div>
+    
+    <script src="/transactions.js"></script>
+</body>
+</html>
